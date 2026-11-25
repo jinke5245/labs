@@ -1,0 +1,15 @@
+{
+  "$schema": "https://www.schemastore.org/lintstagedrc.schema.json",
+  "*.py": [
+    "uv run --locked ruff check --fix",
+    "uv run --locked ruff format"
+  ],
+  "*.{js,mjs,cjs,ts,mts,cts,sh}": [
+    "eslint --fix --no-warn-ignored",
+    "prettier --write"
+  ],
+  "*.{json,jsonc,json5,yml,yaml,toml,md}": [
+    "eslint --fix",
+    "prettier --write"
+  ]
+}

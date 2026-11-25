@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+main() {
+  pnpm exec commitlint --edit "$1"
+}
+
+main "$@"

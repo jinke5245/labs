@@ -1,0 +1,56 @@
+{
+  "name": "@jinke5245/labs",
+  "version": "0.0.0",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^22.22.3"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^2.1.1",
+    "@eslint/markdown": "^9.0.0",
+    "@eslint/shell": "^0.1.2",
+    "@types/node": "^26.6.6",
+    "@vitest/coverage-v8": "^5.1.1",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-json-schema-validator": "^6.3.2",
+    "eslint-plugin-toml": "^1.5.0",
+    "eslint-plugin-yml": "^3.10.0",
+    "globals": "^17.14.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.7.0",
+    "lint-staged": "^17.6.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.10.1",
+    "prettier-plugin-multiline-arrays": "^4.1.11",
+    "prettier-plugin-sh": "^0.20.2",
+    "prettier-plugin-toml": "^4.1.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.74.0",
+    "vitest": "^5.1.1"
+  },
+  "scripts": {
+    "prepare": "run-s prepare:*",
+    "prepare:husky": "node scripts/git/prepare-husky.mjs",
+    "check": "run-s typecheck format:check lint",
+    "typecheck": "tsc --noEmit",
+    "lint-staged": "lint-staged --concurrent false",
+    "lint": "run-s --continue-on-error lint:*",
+    "lint:eslint": "eslint .",
+    "lint:ruff": "uv run --locked ruff check .",
+    "format": "run-s format:fix",
+    "format:fix": "run-s format:fix:*",
+    "format:fix:prettier": "prettier --write .",
+    "format:fix:ruff": "uv run --locked ruff format .",
+    "format:check": "run-s --continue-on-error format:check:*",
+    "format:check:prettier": "prettier --check .",
+    "format:check:ruff": "uv run --locked ruff format --check ."
+  },
+  "packageManager": "pnpm@12.23.0+sha512.02da94ffaf133f46074322afe552f90d40b5f71ae259aefbccdacc5085b1d617e98d65e0131f5748b9b67445978ee5055d7d59a473f1eef0d504854fefcd5975"
+}

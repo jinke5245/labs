@@ -1,0 +1,18 @@
+[project]
+name = "labs"
+version = "0.0.0"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "pytest>=9.2.0",
+  "ruff>=0.17.6",
+  "testcontainers>=4.15.0",
+]
+
+[tool.ruff]
+extend-exclude = [
+  ".agents/",
+]
+force-exclude = true

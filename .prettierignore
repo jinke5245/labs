@@ -1,0 +1,14 @@
+# ignore files
+.gitignore
+
+# source files
+*.py
+
+# lock files
+*-lock.*
+
+# generated files
+.husky/_/
+
+# imported files
+.agents/skills

@@ -1,0 +1,7 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.associations": {
+    ".husky/*": "shellscript"
+  },
+  "files.insertFinalNewline": true
+}
